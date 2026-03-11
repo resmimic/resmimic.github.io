@@ -112,11 +112,11 @@
                 </span>
                 <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
                 <span class="link-block">
-                  <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark" disabled>
+                  <a target="_blank" href="https://github.com/amazon-far/ResMimic" class="external-link button is-normal is-rounded is-dark" disabled>
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (Coming Soon)</span>
+                    <span>Code</span>
                   </a>
                 </span>
         </div>
@@ -138,7 +138,7 @@
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-          We present ResMimic, a two-stage residual framework that unleashes the power of pre-trained general motion tracking policy. 
+          We present <b>ResMimic</b>, a two-stage residual framework that unleashes the power of pre-trained general motion tracking policy. 
           It enables expressive whole-body loco-manipulation with payloads up to 5.5kg without task-specific design, generalizes across poses, and exhibits reactive behavior.
         </h2>
       </div>
@@ -152,14 +152,11 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            Humanoid whole-body loco-manipulation promises transformative capabilities for daily service and warehouse tasks. 
-            While recent advances in general motion tracking (GMT) have enabled humanoids to reproduce diverse human motions, these policies lack the precision and object awareness required for loco-manipulation. 
-            To this end, we introduce <b>ResMimic</b>, a two-stage residual learning framework for precise and expressive humanoid control from human motion data. 
-            First, a GMT policy, trained on large-scale human-only motion, serves as a task-agnostic base for generating human-like whole-body movements. 
-            An efficient but precise residual policy is then learned to refine the GMT outputs to improve locomotion and incorporate object interaction. 
-            To further facilitate efficient training, we design (i) a point-cloud-based object tracking reward for smoother optimization, (ii) a contact reward that encourages accurate humanoid body-object interactions, and (iii) a curriculum-based virtual object controller to stabilize early training. 
-            We evaluate ResMimic in both simulation and on a real Unitree G1 humanoid. 
-            Results show substantial gains in task success, training efficiency, and robustness over strong baselines.
+            Humanoid whole-body loco-manipulation holds transformative potential in daily service and industrial tasks. While recent advances in general motion tracking (GMT) enable humanoids to reproduce diverse human motions, such policies lack the precision and explicit modeling of object interaction necessary for loco-manipulation.
+            We present <b>ResMimic</b>, a two-stage pretrain–post-train residual learning framework for precise humanoid loco-manipulation from human motion data. In the first stage, a GMT policy is pre-trained on large-scale human-only motion data to serve as a task-agnostic whole-body motion prior. 
+            In the second stage, a sample-efficient residual policy is post-trained to inject object-conditioned corrections, enabling accurate object interaction without re-learning general motion skills.
+            Our framework employs a unified reward formulation shared across tasks, eliminating per-task reward engineering. To ensure stable and efficient training, we introduce a dense point-cloud object tracking reward, a contact tracking reward, and a virtual force curriculum.
+            We validate <b>ResMimic</b> in simulation and on a real Unitree G1 humanoid. Results demonstrate substantial improvements in task success rate, robustness, and data efficiency over strong baselines.
             </div>
         </div>
     </div>
@@ -445,7 +442,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{zhao2025resmimicgeneralmotiontracking,
+      <pre><code>@misc{zhao2025resmimic,
         title={ResMimic: From General Motion Tracking to Humanoid Whole-body Loco-Manipulation via Residual Learning}, 
         author={Siheng Zhao and Yanjie Ze and Yue Wang and C. Karen Liu and Pieter Abbeel and Guanya Shi and Rocky Duan},
         year={2025},
